@@ -78,7 +78,8 @@ section {
 }
 footer {
     height: 100px;
-    padding: 20px auto;
+    display: flex;
+    align-items: center;
     background-color: hsl(242, 29%, 10%);
   }
 footer p {
