@@ -79,6 +79,7 @@ section {
 footer {
     height: 100px;
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: hsl(242, 29%, 10%);
   }
