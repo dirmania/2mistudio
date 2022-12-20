@@ -23,6 +23,7 @@
   /* 8. Avoid text overflows */
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+    display: flow-root;
   }
   /* 9. Create a root stacking context*/
   #root, #__next {
@@ -39,10 +40,9 @@ body {
     font-family: 'Unbounded', cursive;
     background-color: rgb(44, 43, 78);
 }
+
 .wrap {
     margin: 0 auto;
-    min-width: 800px;
-    max-width: 900px;
 }
 header {
     width: 100%;
@@ -54,7 +54,8 @@ header {
 header h2 a { 
     font-size: 1rem;
     color: aliceblue;
-    text
+    display: block;
+    line-height: 100px;
 }
 header nav ul{
     display: flex;
@@ -65,15 +66,19 @@ header nav a {
     font-size: 0.8rem;
     line-height: 1.6rem;
     display: block;
-    border-bottom: 2px solid rgb(44, 43, 78);
+    border-bottom: 2px solid hsl(242, 29%, 24%);
 }
 header nav a:hover {
     color: aquamarine;
     border-bottom: 2px solid aliceblue;
 }
 main {
-    height: 200px;
-    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: hsla(208, 100%, 97%, 0.10);
+    margin-bottom: 1rem;
+    padding: 4rem 3rem;
 }
 main h1{
     font-size: 4rem;
@@ -81,16 +86,74 @@ main h1{
 }
 section {
     height: 200px;
+    border-radius: 1rem;
+    background-color: hsla(208, 100%, 97%, 0.10);
+    margin-bottom: 1rem;
 }
 footer {
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: hsl(242, 29%, 10%);
+    border-radius: 1rem;
+    background-color: hsl(242, 29%, 20%);
   }
 footer p {
     color: lightgray;
     font-size: 0.6rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
+}
+
+
+
+/*Mobile Phone*/
+@media only screen and (max-width: 575.98px) {
+  .wrap {
+    max-width: 90%;
+
+  }
+  header {
+    flex-direction: column;
+  }
+  header nav {
+    display: none;
+  }
+  header nav ul{
+    flex-direction: column;
+ }
+ main {
+  padding: 2rem 0;
+ }
+  main h1{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+
+  }
+  footer span {
+    display: block;
+    line-height: 1.6rem;
+  }
+}
+
+
+
+/*Tablets*/
+@media only screen and (min-width: 767.98px)  {
+  .wrap {
+    min-width: 700px;
+    max-width: 100%;
+  }
+}
+
+
+
+
+/*Computer*/
+@media only screen and (min-width: 991.98px) {
+  .wrap {
+    min-width: 800px;
+    max-width: 900px;
+  }
 }
