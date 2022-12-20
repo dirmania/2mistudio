@@ -53,7 +53,9 @@ header {
 }
 header h2 a { 
     font-size: 1rem;
-    color: aliceblue;}
+    color: aliceblue;
+    text
+}
 header nav ul{
     display: flex;
     gap:2rem;
@@ -72,6 +74,10 @@ header nav a:hover {
 main {
     height: 200px;
     padding-top: 100px;
+}
+main h1{
+    font-size: 4rem;
+    text-shadow: 4px 3px rgb(161, 182, 200);
 }
 section {
     height: 200px;
